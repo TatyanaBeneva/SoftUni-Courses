@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging", "MoreExercise\Messaging.csproj", "{A8F4D695-D2BA-4AF6-ADEE-E37B5EAD4A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRace", "CarRace\CarRace.csproj", "{8BBCEEBB-DC31-40A5-BFF6-4A2BD1761311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiddenMessage", "HiddenMessage\HiddenMessage.csproj", "{26B4D4E8-5B03-45E7-B0AF-A7A24B58B121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8F4D695-D2BA-4AF6-ADEE-E37B5EAD4A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F4D695-D2BA-4AF6-ADEE-E37B5EAD4A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F4D695-D2BA-4AF6-ADEE-E37B5EAD4A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F4D695-D2BA-4AF6-ADEE-E37B5EAD4A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBCEEBB-DC31-40A5-BFF6-4A2BD1761311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBCEEBB-DC31-40A5-BFF6-4A2BD1761311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBCEEBB-DC31-40A5-BFF6-4A2BD1761311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBCEEBB-DC31-40A5-BFF6-4A2BD1761311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B4D4E8-5B03-45E7-B0AF-A7A24B58B121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B4D4E8-5B03-45E7-B0AF-A7A24B58B121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B4D4E8-5B03-45E7-B0AF-A7A24B58B121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B4D4E8-5B03-45E7-B0AF-A7A24B58B121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D310C727-2F00-476D-B90B-9F57A7A93E6A}
+	EndGlobalSection
+EndGlobal

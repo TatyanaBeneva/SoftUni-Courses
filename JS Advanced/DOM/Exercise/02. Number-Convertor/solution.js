@@ -1,0 +1,21 @@
+function solve() {
+    let optionaList = document.querySelectorAll('#selectMenuTo')[0];
+    let button = document.querySelector('button');
+    let input = document.querySelector('#input');
+    optionaList.innerHTML = `
+    <option selected value=""></option>
+    <option value="hexadecimal">Hexadecimal</option>
+    <option value="binary">Binary</option>
+    `;
+
+    button.addEventListener('click', () =>{
+        let result;
+        if(optionaList.value === 'binary'){
+            result = Number(input.value).toString(2);
+        }else{
+            result = Number(input.value).toString(16).toUpperCase();
+        }
+
+        document.getElementById('result').value = result;
+    })
+}
