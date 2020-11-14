@@ -1,0 +1,1 @@
+const firebaseConfig = {}; // ---> set your firebase configuration file from creating the app
