@@ -1,0 +1,26 @@
+{{> header}}
+<div class="offer-details">
+    <h1>Under Armour HOVR</h1>
+    <div class="info">
+        <img src={{imageUrl}}
+            alt="">
+        <div class="description">{{description}}
+            <br>
+            <br>
+            <p class="price">{{price}}</p>
+        </div>
+    </div>
+    <div class="actions">
+        {{#if isCreator}}
+        <a href="#/edit/{{id}}">Edit</a>
+        <a href="#/delete/{{id}}">Delete</a>
+        {{else}}
+            {{#if isBuyAlready}}
+            <span>You bought it</span>
+            {{else}}
+            <a href="#/buy/{{id}}">Buy</a>
+            {{/if}}
+        {{/if}}
+    </div>
+</div>
+{{> footer}}

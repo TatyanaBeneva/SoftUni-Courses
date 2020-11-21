@@ -1,0 +1,2 @@
+const firebaseConfig = {};
+// Initialize Firebase
