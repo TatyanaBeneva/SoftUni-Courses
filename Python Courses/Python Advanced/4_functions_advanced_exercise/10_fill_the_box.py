@@ -1,5 +1,3 @@
-from collections import deque
-
 def fill_the_box(height, length, width, *args):
     remaining_space = height * length * width
 
