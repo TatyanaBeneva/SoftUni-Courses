@@ -1,0 +1,5 @@
+{"id": 1, "name": "Notebook", "count": 9, "img_path": "notebook.png"}
+{"id": 2, "name": "Pen", "count": 17, "img_path": "pen.png"}
+{"id": 3, "name": "Pencil", "count": 13, "img_path": "pencil.png"}
+{"id": 4, "name": "Ruler", "count": 4, "img_path": "ruler.png"}
+{"id": 5, "name": "Eraser", "count": 0, "img_path": "eraser.png"}
