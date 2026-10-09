@@ -1,0 +1,1 @@
+{"username": "tanchetu95", "first_name": "Tatyana", "last_name": "Beneva", "salt": "6f44541c326692d0df6483daf811fb5c", "password_hash": "ed7744a64efc400421b7a853c2b381ed498a0a40fc58cb186ff27f651c114b62", "products": [2, 3, 4, 1, 2, 3, 2]}
