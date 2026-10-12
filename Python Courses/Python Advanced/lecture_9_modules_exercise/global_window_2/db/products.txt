@@ -1,0 +1,5 @@
+{"id": 1, "name": "Notebook", "count": 9, "img_path": "img.webp"}
+{"id": 2, "name": "Pen", "count": 15, "img_path": "img.webp"}
+{"id": 3, "name": "Pencil", "count": 13, "img_path": "img.webp"}
+{"id": 4, "name": "Ruler", "count": 4, "img_path": "img.webp"}
+{"id": 5, "name": "Eraser", "count": 4, "img_path": "img.webp"}
