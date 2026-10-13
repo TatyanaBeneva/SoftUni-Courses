@@ -3,7 +3,6 @@ START_UNITS = 100
 n = int(input())
 matrix = []
 space_position = None
-planet_b = None
 units = START_UNITS
 
 for row_index in range(n):
@@ -12,8 +11,6 @@ for row_index in range(n):
 
     if "S" in row:
         space_position = (row_index, row.index("S"))
-    if "P" in row:
-        planet_b = (row_index, row.index("P"))
 
 directions = {
     "up": (-1, 0),
@@ -43,7 +40,7 @@ while True:
     destination = matrix[next_row][next_col]
     space_position = (next_row, next_col)
 
-    if matrix[row][col] == "S":
+    if destination == "S":
         matrix[row][col] = "."
 
     if destination == "R":
