@@ -7,12 +7,15 @@ bee_position = None
 energy = BEE_ENERGY
 total_nectar = 0
 recharge_used = False
+
 for row_index in range(n):
     row = list(input())
     matrix.append(row)
 
     if "B" in row:
-        bee_position = (row_index, row.index("B"))
+        col_index = row.index("B")
+        bee_position = (row_index, col_index)
+        row[col_index] = "-"
 
 directions = {
     "up": (-1, 0),
@@ -30,26 +33,12 @@ while True:
     row, col = bee_position
     row_change, col_change = directions[command]
 
-    next_row = row + row_change
-    next_col = col + col_change
-
-
-    if not (0 <= next_row < n and 0 <= next_col < n):
-        if command == "up":
-            next_row = n-1
-        elif command == "down":
-            next_row = 0
-        elif command == "left":
-            next_col = n-1
-        elif command == "right":
-            next_col = 0
+    next_row = (row + row_change) % n
+    next_col = (col + col_change) % n
 
     energy -= 1
     destination = matrix[next_row][next_col]
     bee_position = (next_row, next_col)
-
-    if matrix[row][col] == "B":
-        matrix[row][col] = "-"
 
     if destination.isdigit():
         total_nectar += int(destination)
@@ -63,18 +52,14 @@ while True:
 
         break
 
-    if energy <= 0 and total_nectar < NEEDED_NECTAR:
-        print("This is the end! Beesy ran out of energy.")
-        break
-
-    if energy <= 0 and total_nectar >= NEEDED_NECTAR:
-        if recharge_used or total_nectar == NEEDED_NECTAR:
+    if energy <= 0:
+        if recharge_used or total_nectar <= NEEDED_NECTAR:
             print("This is the end! Beesy ran out of energy.")
             break
 
-        recharge_used = True
-        energy += total_nectar - NEEDED_NECTAR
+        energy = total_nectar - NEEDED_NECTAR
         total_nectar = NEEDED_NECTAR
+        recharge_used = True
 
 row, col = bee_position
 matrix[row][col] = "B"
