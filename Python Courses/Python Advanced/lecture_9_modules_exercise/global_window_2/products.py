@@ -46,6 +46,47 @@ def buy_product(product_id):
 
     render_products_screen()
 
+def add_product(name, image, count):
+    with open("db/products.txt", "r+") as file:
+        if name == "" or image == "" or count == "":
+            render_add_product_screen(error="All fields are required!")
+            return
+        if not count.isdigit():
+            render_add_product_screen(error="Count must be a valid number!")
+            return
+
+        file.write(json.dumps({
+            "id": len(file.readlines()) + 1,
+            "name": name,
+            "img_path": image,
+            "count": int(count)}) + "\n")
+
+        render_products_screen()
+
+def render_add_product_screen(error=None):
+    clean_screen()
+
+    tk.Label(app, text="Name: ").grid(row=0, column=0)
+    name = tk.Entry(app)
+    name.grid(row=0, column=1)
+
+    tk.Label(app, text="Image: ").grid(row=1, column=0)
+    image = tk.Entry(app)
+    image.grid(row=1, column=1)
+
+    tk.Label(app, text="Count: ").grid(row=2, column=0)
+    count = tk.Entry(app)
+    count.grid(row=2, column=1)
+
+    tk.Button(
+        app,
+        text="Add",
+        command=lambda: add_product(name.get(), image.get(), count.get()),
+    ).grid(row=3, column=0)
+
+    if error:
+        tk.Label(app, text=error).grid(row=4, column=0)
+
 
 def render_products_screen():
     clean_screen()
@@ -74,3 +115,22 @@ def render_products_screen():
                 text=f"Buy {product['id']}",
                 command=lambda product_id=product["id"]: buy_product(product_id),
             ).grid(row=row+3, column=column)
+
+            with open("db/current_user.txt") as file:
+                username = file.read().strip()
+
+            with open("db/users.txt") as file:
+                users = [json.loads(user.strip()) for user in file]
+
+                for user in users:
+                    if user["username"] == username:
+                        if user.get("is_admin"):
+                            tk.Button(
+                                app,
+                                text="Add product",
+                                bg="green",
+                                fg="white",
+                                command=render_add_product_screen
+                            ).grid(row=row+4, column=0)
+
+                        break

@@ -13,8 +13,8 @@ def login(username, password):
             if name == username and pwd == password:
                 with open("db/current_user.txt", "w") as f:
                     f.write(username)
-                    render_products_screen()
-                    return
+                render_products_screen()
+                return
 
     render_login_screen(error="Invalid username or password")
 

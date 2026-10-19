@@ -3,3 +3,4 @@
 {"id": 3, "name": "Pencil", "count": 13, "img_path": "img.webp"}
 {"id": 4, "name": "Ruler", "count": 4, "img_path": "img.webp"}
 {"id": 5, "name": "Eraser", "count": 4, "img_path": "img.webp"}
+{"id": 6, "name": "new product", "img_path": "img.webp", "count": 2}
